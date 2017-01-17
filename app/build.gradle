@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
 
+dependencies {
+    def mobileCenterSdkVersion = '0.3.3'
+    compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
+    compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -26,4 +32,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
+
 }
